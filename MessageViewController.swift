@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MessageViewController.swift
 //  ShowMe
 //
 //  Created by Xoi's iMac on 2015-07-15.
@@ -8,25 +8,24 @@
 
 import UIKit
 
-
-
-
-class ViewController: UIViewController {
+class MessageViewController: UIViewController {
 
     
     
-    @IBOutlet weak var textToSendField: UITextField!
+    @IBOutlet weak var messageLabel: UILabel!
     
     
-    @IBAction func showMe(sender: UIButton) {
-        NSLog("User Wrote: %@", textToSendField.text)
-    }
-    
+    var messageData: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
+        
+        
+        messageLabel.text = messageData
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,15 +33,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        let messageController = segue.destinationViewController as! MessageViewController
-        messageController.messageData = textToSendField.text
-        
     }
-
+*/
+    
 
 }
-

@@ -13,6 +13,7 @@
 		F61CFC9F1B56C7CB00BB3DB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61CFC9E1B56C7CB00BB3DB9 /* Images.xcassets */; };
 		F61CFCA21B56C7CB00BB3DB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61CFCA01B56C7CB00BB3DB9 /* LaunchScreen.xib */; };
 		F61CFCAE1B56C7CB00BB3DB9 /* ShowMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61CFCAD1B56C7CB00BB3DB9 /* ShowMeTests.swift */; };
+		F61CFCBA1B56D42B00BB3DB9 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61CFCB91B56D42B00BB3DB9 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F61CFCA71B56C7CB00BB3DB9 /* ShowMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61CFCAC1B56C7CB00BB3DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F61CFCAD1B56C7CB00BB3DB9 /* ShowMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMeTests.swift; sourceTree = "<group>"; };
+		F61CFCB91B56D42B00BB3DB9 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = ../MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				F61CFC971B56C7CB00BB3DB9 /* AppDelegate.swift */,
 				F61CFC991B56C7CB00BB3DB9 /* ViewController.swift */,
 				F61CFC9B1B56C7CB00BB3DB9 /* Main.storyboard */,
+				F61CFCB91B56D42B00BB3DB9 /* MessageViewController.swift */,
 				F61CFC9E1B56C7CB00BB3DB9 /* Images.xcassets */,
 				F61CFCA01B56C7CB00BB3DB9 /* LaunchScreen.xib */,
 				F61CFC951B56C7CB00BB3DB9 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F61CFC9A1B56C7CB00BB3DB9 /* ViewController.swift in Sources */,
+				F61CFCBA1B56D42B00BB3DB9 /* MessageViewController.swift in Sources */,
 				F61CFC981B56C7CB00BB3DB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				F61CFCB31B56C7CB00BB3DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F61CFCB41B56C7CB00BB3DB9 /* Build configuration list for PBXNativeTarget "ShowMeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				F61CFCB61B56C7CB00BB3DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

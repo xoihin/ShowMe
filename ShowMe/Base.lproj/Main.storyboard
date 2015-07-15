@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9B-tp-flW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -51,6 +52,7 @@
                                 </state>
                                 <connections>
                                     <action selector="showMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RUS-Ja-Rgq"/>
+                                    <segue destination="HTU-E7-zaQ" kind="show" identifier="show" id="GRJ-c4-U3f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,12 +73,12 @@
                                 <exclude reference="drf-nK-0Mu"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="McN-YW-ELn"/>
-                                <exclude reference="XLl-v2-nxy"/>
                                 <exclude reference="JS4-iw-P1r"/>
                                 <exclude reference="MPg-sG-SlB"/>
                                 <exclude reference="Sgf-n6-ASY"/>
                                 <exclude reference="YTT-f1-SgJ"/>
+                                <exclude reference="McN-YW-ELn"/>
+                                <exclude reference="XLl-v2-nxy"/>
                                 <exclude reference="Ete-HI-rcx"/>
                             </mask>
                         </variation>
@@ -87,12 +89,12 @@
                                 <include reference="drf-nK-0Mu"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="McN-YW-ELn"/>
-                                <include reference="XLl-v2-nxy"/>
                                 <include reference="JS4-iw-P1r"/>
                                 <include reference="MPg-sG-SlB"/>
                                 <include reference="Sgf-n6-ASY"/>
                                 <include reference="YTT-f1-SgJ"/>
+                                <include reference="McN-YW-ELn"/>
+                                <include reference="XLl-v2-nxy"/>
                                 <include reference="Ete-HI-rcx"/>
                             </mask>
                         </variation>
@@ -105,6 +107,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1624.5" y="612"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="vQx-WW-t18">
+            <objects>
+                <viewController id="HTU-E7-zaQ" customClass="MessageViewController" customModule="ShowMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xyh-IV-tn9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZW0-S2-V9V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hC4-zM-6iM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You said..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czI-in-MsD">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="90" width="140" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAP-Ly-PmA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="143" width="368" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="czI-in-MsD"/>
+                                <exclude reference="aAP-Ly-PmA"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="czI-in-MsD"/>
+                                <include reference="aAP-Ly-PmA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="aAP-Ly-PmA" id="6ph-ni-6od"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDT-hT-cws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2400" y="858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OWQ-VP-FXD">
