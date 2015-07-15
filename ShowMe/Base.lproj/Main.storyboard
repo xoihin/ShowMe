@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9B-tp-flW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ShowMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,113 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text to send" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHn-Ep-5uF">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FfW-a6-6tu"/>
+                                    <constraint firstAttribute="width" constant="138" id="Thj-IT-xqu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FfW-a6-6tu"/>
+                                        <exclude reference="Thj-IT-xqu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="FfW-a6-6tu"/>
+                                        <include reference="Thj-IT-xqu"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Lt-Kr-gTP">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drf-nK-0Mu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Show Me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RUS-Ja-Rgq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="drf-nK-0Mu" firstAttribute="top" secondItem="0Lt-Kr-gTP" secondAttribute="bottom" constant="18" id="Ete-HI-rcx"/>
+                            <constraint firstItem="0Lt-Kr-gTP" firstAttribute="top" secondItem="XHn-Ep-5uF" secondAttribute="bottom" constant="15" id="JS4-iw-P1r"/>
+                            <constraint firstItem="0Lt-Kr-gTP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="MPg-sG-SlB"/>
+                            <constraint firstItem="XHn-Ep-5uF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="McN-YW-ELn"/>
+                            <constraint firstItem="0Lt-Kr-gTP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Sgf-n6-ASY"/>
+                            <constraint firstItem="XHn-Ep-5uF" firstAttribute="leading" secondItem="0Lt-Kr-gTP" secondAttribute="leading" id="XLl-v2-nxy"/>
+                            <constraint firstItem="0Lt-Kr-gTP" firstAttribute="centerX" secondItem="drf-nK-0Mu" secondAttribute="centerX" id="YTT-f1-SgJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="XHn-Ep-5uF"/>
+                                <exclude reference="0Lt-Kr-gTP"/>
+                                <exclude reference="drf-nK-0Mu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="McN-YW-ELn"/>
+                                <exclude reference="XLl-v2-nxy"/>
+                                <exclude reference="JS4-iw-P1r"/>
+                                <exclude reference="MPg-sG-SlB"/>
+                                <exclude reference="Sgf-n6-ASY"/>
+                                <exclude reference="YTT-f1-SgJ"/>
+                                <exclude reference="Ete-HI-rcx"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="XHn-Ep-5uF"/>
+                                <include reference="0Lt-Kr-gTP"/>
+                                <include reference="drf-nK-0Mu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="McN-YW-ELn"/>
+                                <include reference="XLl-v2-nxy"/>
+                                <include reference="JS4-iw-P1r"/>
+                                <include reference="MPg-sG-SlB"/>
+                                <include reference="Sgf-n6-ASY"/>
+                                <include reference="YTT-f1-SgJ"/>
+                                <include reference="Ete-HI-rcx"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="First View" id="gGc-fz-19q"/>
+                    <connections>
+                        <outlet property="textToSendField" destination="0Lt-Kr-gTP" id="Ozr-Gw-GhD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1624.5" y="612"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OWQ-VP-FXD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a9B-tp-flW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vWa-zn-Rkm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="iWU-nX-lUA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96d-zY-y9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="1274"/>
         </scene>
     </scenes>
 </document>
